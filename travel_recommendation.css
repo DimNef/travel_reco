@@ -1,0 +1,89 @@
+/* Basic CSS for the navigation bar */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', serif;
+    box-sizing: border-box;
+}
+ 
+
+nav {
+    background-color: #40515E;
+    width: 100%;  /* i'm assuming full width */
+    height: 60px; /* change it to desired width */
+   padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    /* padding: 0; */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .logoClass {
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 40px 1fr;
+    column-gap: 10px;
+   }
+
+  #logo { 
+    display: inline-block;
+    vertical-align: left;
+    width: 40px;
+    height: 40px;
+}
+
+#siteName {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-size: 30px;
+}
+
+.search-container {
+    background-color: #FFF;
+    position: relative;
+    border-radius: 30px;
+    padding: 3px 15px 3px 10px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .search-box {
+    background-color: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 15px;
+    color: #4CAF50;
+    border: none;
+    width: 300px;
+    padding: 5px;
+  }
+  .search-button {
+    padding: 7px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #searchIcon { 
+    width: 30px;
+    height: 30px;
+    
+}
