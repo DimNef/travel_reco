@@ -12,27 +12,55 @@ nav {
     background-color: #40515E;
     width: 100%;  /* i'm assuming full width */
     height: 60px; /* change it to desired width */
-   padding: 20px;
+    padding: 5px;
+    margin: 0 auto;
     display: flex;
+    text-align: center;
     align-items: center;
+    vertical-align: middle;
     justify-content: space-between;
     color: white;
   }
-  
-  nav ul {
-    list-style-type: none;
-    /* padding: 0; */
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav a {
+
+    nav a {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
     text-decoration: none;
     color: white;
     font-weight: bold;
+    height: 60px;
+    padding: 5px;
+  }
+
+    /* Navbar links on mouse-over */
+.nav a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+  }
+  
+  nav ul li {
+   display: flex;
+    margin-right: 10px;
+    height: 60px;
+    text-align: center;
+        vertical-align: middle;
+        justify-content: center;
+        margin-top: auto;
   }
 
   .logoClass {
@@ -62,6 +90,10 @@ nav {
     padding: 3px 15px 3px 10px;
     vertical-align: middle;
     text-align: center;
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 300px 30px 1fr 1fr;
+    column-gap: 10px;
   }
   .search-box {
     background-color: transparent;
@@ -85,5 +117,7 @@ nav {
   #searchIcon { 
     width: 30px;
     height: 30px;
+    justify-self: center;
+    align-self: center;
     
 }
