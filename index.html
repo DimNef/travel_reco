@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <title>Travel Recommendation Site</title>
   <link rel="stylesheet" href="./travel_recommendation.css">
+     <!-- Linking Font-Awesome For the Icons -->
+     <link rel="stylesheet" href=
+     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <nav>
     <div id="logoDiv" class="logoClass">
         <div class="logoImg">
@@ -15,12 +20,13 @@
             <h1 id="siteName">Travel Guy</h1>
         </div>
     </div>
-    <div>
-    <ul>
-    <li><a href="./index.html" id="home" class="active" >Home </a></li>
-    <li><a href="./about_us.html" id="about">About Us </a></li>
-    <li><a href="./contact_us.html" id="contact">Contact Us </a></li>
-    </ul>
+
+    <div class="center">
+        <ul>
+            <li class="active"><a href="./index.html" id="home" >Home </a></li>
+            <li><a href="./about_us.html" id="about">About Us </a></li>
+            <li><a href="./contact_us.html" id="contact">Contact Us </a></li>
+        </ul>
     </div>
 
     <div class="search-container">  
@@ -30,7 +36,33 @@
         <button class="search-button" id='btnReset'>Reset</button>     
     </div>   
 </nav>
+<div id="siteContent" class="site-content">
+
+    
+    <div id="socialSidebar" class="social-sidebar">
+             
+        <a href="#youtube" class="youtube">
+            <i class="fa fa-youtube"></i>
+        </a>
+        <a href="#instagram" class="instagram">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="#facebook" class="facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#twitter" class="twitter">
+            <i class="fa fa-twitter"></i>
+        </a>       
+        
+    </div>
+
+
+
+</div>
 
 <script src="./travel_recommendation.js"></script>
+
+
+
 </body>
 </html>

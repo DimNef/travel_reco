@@ -1,3 +1,11 @@
+body, html {
+    height: 100%;
+    background-image: url("./images/background.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+
+
 /* Basic CSS for the navigation bar */
 
 *{
@@ -9,28 +17,25 @@
  
 
 nav {
-    background-color: #40515E;
+    background-color: #656d74;
     width: 100%;  /* i'm assuming full width */
     height: 60px; /* change it to desired width */
     padding: 5px;
     margin: 0 auto;
     display: flex;
-    text-align: center;
     align-items: center;
     vertical-align: middle;
     justify-content: space-between;
     color: white;
   }
-
+/* Navbar links */
     nav a {
     display: flex;
-    text-align: center;
-    vertical-align: middle;
     text-decoration: none;
     color: white;
     font-weight: bold;
     height: 60px;
-    padding: 5px;
+    padding: 20px 0;
   }
 
     /* Navbar links on mouse-over */
@@ -40,27 +45,25 @@ nav {
 
 /* Current/active navbar link */
 .active {
-  background-color: #04AA6D;
+  background-color: #be482a;
 }
 
   nav ul {
     display: flex;
-    list-style-type: none;
-    padding: 0;
-    height: 60px;
-    text-align: center;
-    vertical-align: middle;
+    justify-content: center;
     align-items: center;
+    list-style-type: none;
+    height: 60px;
+
   }
   
   nav ul li {
-   display: flex;
-    margin-right: 10px;
+    margin-left: 1px; 
+    margin-right: 1px;
     height: 60px;
-    text-align: center;
-        vertical-align: middle;
-        justify-content: center;
-        margin-top: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    
   }
 
   .logoClass {
@@ -100,14 +103,14 @@ nav {
     outline: none;
     height: 40px;
     font-size: 15px;
-    color: #4CAF50;
+    color: #be482a;
     border: none;
     width: 300px;
     padding: 5px;
   }
   .search-button {
     padding: 7px 15px;
-    background-color: #4CAF50;
+    background-color: #be482a;
     color: white;
     border: none;
     cursor: pointer;
@@ -121,3 +124,82 @@ nav {
     align-self: center;
     
 }
+
+/*social media bar*/
+
+.social-sidebar {
+    position: fixed;
+    top: 75%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.social-sidebar a {
+    /*border-radius: 50%;
+    margin: 15px;*/
+
+    display: block;
+    text-align: center;
+    padding: 8px;
+    transition: all 0.5s ease;
+    color: white;
+    font-size: 20px;
+}
+
+
+.social-sidebar a:hover {
+     color: #000;
+    width: 50px;
+}
+
+/* .social-sidebar-icon {
+    color: #a3a3a3;
+    background: transparent;
+    padding: 0;
+}*/
+
+
+
+/* Style all font awesome icons */
+.fa {
+   display: flex !important;
+  padding: 10px;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* youtube */
+.fa-youtube {  
+  background: #656d74;
+  color: white;
+}
+
+/* instagram */
+.fa-instagram {  
+    background: #656d74;
+    color: white;
+  }
+
+  /* facebook */
+.fa-facebook {  
+    background: #656d74;
+    color: white;
+  }
+
+  /* twitter */
+.fa-twitter {  
+    background: #656d74;
+    color: white;
+  }
