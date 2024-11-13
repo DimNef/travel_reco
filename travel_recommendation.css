@@ -1,6 +1,6 @@
 body, html {
     height: 100%;
-    background-image: url("./images/background.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./images/background.jpg");
      background-repeat: no-repeat;
      background-size: cover;
   }
@@ -17,7 +17,7 @@ body, html {
  
 
 nav {
-    background-color: #656d74;
+    background-color: #343032;
     width: 100%;  /* i'm assuming full width */
     height: 60px; /* change it to desired width */
     padding: 5px;
@@ -45,7 +45,7 @@ nav {
 
 /* Current/active navbar link */
 .active {
-  background-color: #be482a;
+  background-color: #915b0a;
 }
 
   nav ul {
@@ -69,14 +69,14 @@ nav {
   .logoClass {
     display: grid;
     align-items: center; 
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 1fr;
     column-gap: 10px;
    }
 
   #logo { 
     display: inline-block;
     vertical-align: left;
-    width: 40px;
+    /*width: 40px;*/
     height: 40px;
 }
 
@@ -103,14 +103,14 @@ nav {
     outline: none;
     height: 40px;
     font-size: 15px;
-    color: #be482a;
+    color: #915b0a;
     border: none;
     width: 300px;
     padding: 5px;
   }
   .search-button {
     padding: 7px 15px;
-    background-color: #be482a;
+    background-color: #915b0a;
     color: white;
     border: none;
     cursor: pointer;
@@ -163,10 +163,10 @@ nav {
 /* Style all font awesome icons */
 .fa {
    display: flex !important;
-  padding: 10px;
-  font-size: 30px;
-  width: 40px;
-  height: 40px;
+  padding: 5px;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   text-decoration: none;
   align-items: center;
@@ -182,24 +182,51 @@ nav {
 
 /* youtube */
 .fa-youtube {  
-  background: #656d74;
+  background: none;
   color: white;
 }
 
 /* instagram */
 .fa-instagram {  
-    background: #656d74;
+    background: none;
     color: white;
   }
 
   /* facebook */
 .fa-facebook {  
-    background: #656d74;
+    background: none;
     color: white;
   }
 
   /* twitter */
 .fa-twitter {  
-    background: #656d74;
+    background: none;
     color: white;
   }
+
+  /*headline and caption*/
+.static-info-pane {
+    position: fixed;
+    top: 60%;
+    left: 150px;
+    transform: translateY(-50%);
+    align-items: center;
+    color: white;
+}
+
+  #headLine {
+    font-family: 'Lato';
+    font-style: bold;
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px;  
+    margin:40px;
+}
+
+#subHeading {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    margin: 40px;
+}
