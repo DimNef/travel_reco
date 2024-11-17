@@ -98,6 +98,21 @@ nav {
     grid-template-columns: 300px 30px 1fr 1fr;
     column-gap: 10px;
   }
+
+.search-container-inactive {
+    visibility: hidden;
+    background-color: #FFF;
+    position: relative;
+    border-radius: 30px;
+    padding: 3px 15px 3px 10px;
+    vertical-align: middle;
+    text-align: center;
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 300px 30px 1fr 1fr;
+    column-gap: 10px;
+}
+
   .search-box {
     background-color: transparent;
     outline: none;
@@ -206,6 +221,7 @@ nav {
   }
 
   /*headline and caption*/
+
 .static-info-pane {
     position: fixed;
     top: 50%;
@@ -213,6 +229,16 @@ nav {
     transform: translateY(-50%);
     align-items: center;
     color: white;
+}
+
+.static-info-pane-about {
+    position: fixed;
+    top: 50%;
+    left: 150px;
+    transform: translateY(-50%);
+    align-items: center;
+    color: white;
+
 }
 
   #headLine {
@@ -224,10 +250,38 @@ nav {
     margin:40px;
 }
 
+  #headLineSmall {
+    font-family: 'Lato';
+    font-style: bold;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 1px;  
+    margin:40px;
+}
+
 #subHeading {
     font-family: 'Open Sans';
     font-size: 20px;
     letter-spacing: 2px;
     line-height: 45px;
     margin: 40px;
+}
+
+#normalParagraph {
+    font-family: 'Roboto';
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    line-height: 30px;
+   /* margin: 40px; */
+}    
+
+.backgroundDiv {
+    background-color: #343032;
+    opacity: 0.6;
+    padding: 40px 20px;
+    margin:40px;
+}
+
+#teamDiv {
+    display: inline-block;
 }
