@@ -2,9 +2,16 @@ body, html {
     height: 100%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./images/background.jpg");
      background-repeat: no-repeat;
-     background-size: cover;
+     background-size: cover;     
   }
 
+  .site-content {
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    height: 1000;
+   /* margin-top: 60px;*/
+  }
 
 /* Basic CSS for the navigation bar */
 
@@ -23,6 +30,8 @@ nav {
     padding: 5px;
     margin: 0 auto;
     display: flex;
+    position:fixed;
+    z-index: 2;
     align-items: center;
     vertical-align: middle;
     justify-content: space-between;
@@ -233,11 +242,12 @@ nav {
 
 .static-info-pane-about {
     position: fixed;
-    top: 50%;
+    top: 60px;
     left: 150px;
-    transform: translateY(-50%);
+   /* transform: translateY(-50%);*/
     align-items: center;
     color: white;
+    overflow: auto;
 
 }
 
@@ -275,9 +285,12 @@ nav {
    /* margin: 40px; */
 }    
 
+
+/*About us page styling */
+
 .backgroundDiv {
-    background-color: #343032;
-    opacity: 0.6;
+    background-color: rgba(52,48,50,0.6);
+   /* opacity: 0.6;*/
     padding: 40px 20px;
     margin:40px;
 }
@@ -285,3 +298,78 @@ nav {
 #teamDiv {
     display: inline-block;
 }
+
+.button {
+    padding: 7px 15px;
+    background-color: #915b0a;
+    color: white;
+    border: white;
+    cursor: pointer;
+    border-radius: 40px;
+    outline: 0;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+
+  .image-cropper {
+    width: 200px;
+  height: 200px;
+  position: relative;
+  align-self: center;
+  overflow: hidden;
+  border-radius: 50%;
+  }
+
+  .team-image {
+    display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  }
+
+  /* Three columns side by side */
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    align-items: center;
+  }
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 0 16px;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+
+  
