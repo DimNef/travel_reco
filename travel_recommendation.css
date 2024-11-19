@@ -9,7 +9,7 @@ body, html {
     position: fixed;
     z-index: 1;
     overflow: auto;
-    height: 1000;
+    height: 1000px;
    /* margin-top: 60px;*/
   }
 
@@ -318,12 +318,13 @@ nav {
   }
 
   .image-cropper {
-    width: 200px;
-  height: 200px;
+    width: 180px;
+  height: 180px;
   position: relative;
   align-self: center;
   overflow: hidden;
   border-radius: 50%;
+  margin: 10px;
   }
 
   .team-image {
@@ -352,12 +353,19 @@ nav {
   
   /* Add some shadows to create a card effect */
   .card {
+        background-color: rgba(52,48,50,0.63);
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
   }
   
   /* Some left and right padding inside the container */
   .container {
     padding: 0 16px;
+    align-items: center;
+    justify-content: center;
   }
   
   /* Clear floats */
