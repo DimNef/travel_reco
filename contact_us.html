@@ -38,20 +38,51 @@
 
  <!-- Contact  us Content div -->
 
-<div id="siteContent" class="site-content" style="display:flex;align-items:center;">
+<div id="siteContent" class="site-content">
 
-    <div id="staticInfoPaneAbout" class="static-info-pane-about"> 
-        <h1 id="headLine">Contact Us</h1>
-        <h2 id="subHeading">Get in touch</p>
-    </div>        
+<div id="staticInfoPaneAbout" class="static-info-pane-about"> 
+   <div style="width:1600px; display:flex; align-self:center;">
+
+    <div style="width:800px; float:left; ">
+    <h1 id="headLine">Contact Us</h1>
+    <h2 id="subHeading">Get in touch</h2>
+    </div>    
 
  <!-- Contact Form Section -->
- <div style="display:flex;align-items:center">
+<!-- <div style="display:flex;align-items:center"> -->
+     <div style="width:800px; float:right; margin-top:auto;">
     <div class="backgroundDiv">
-        <input type="text" class="search-box" id="keywordInput" placeholder="Name">
+<div class="form-container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input  value="Submit" class="button">
+
+  </form>
+
 
     </div>
- </div>
+</div>
+
+    </div>
+    <div style="clear: both;"></div>
+
+</div>
 </div>
 
 
