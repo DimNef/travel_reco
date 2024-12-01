@@ -82,6 +82,7 @@ function levenshtein (str1, str2) {
         const resultDiv = document.getElementById('result');
         resultDiv.innerHTML = '';
 
+        /* search countres */    
             if(levenshtein('country', searchText) <= 3){
                 const recommendation = data.countries;
                 console.log(recommendation);
@@ -96,11 +97,52 @@ function levenshtein (str1, str2) {
                 }
                 
             }
+        /* search temples */
+        if(levenshtein('temple', searchText) <= 3){
+            const recommendation = data.temples;
+            console.log(recommendation);
+            
+            for (let i = 0; i < recommendation.length; i++) {
+              // for (let j = 0; j < recommendation[i].temples.length; j++){
+                    resultDiv.innerHTML += `<img src="${recommendation[i].imageUrl}" alt="not available" style="width:100%; margin-top:30px;">`;
+                    resultDiv.innerHTML +=  `<h2 style="width:100%; margin-top:20px;">${recommendation[i].name}</h2>`;    
+                    resultDiv.innerHTML += `<p style="width:100%; margin-top:15px;">${recommendation[i].description}</p>`;
+    
+              //  }
+            }  
+        }
+
+        /* search beaches */
+        if(levenshtein('beach', searchText) <= 3){
+            const recommendation = data.beaches;
+            console.log(recommendation);
+            
+            for (let i = 0; i < recommendation.length; i++) {
+              // for (let j = 0; j < recommendation[i].temples.length; j++){
+                    resultDiv.innerHTML += `<img src="${recommendation[i].imageUrl}" alt="not available" style="width:100%; margin-top:30px;">`;
+                    resultDiv.innerHTML +=  `<h2 style="width:100%; margin-top:20px;">${recommendation[i].name}</h2>`;    
+                    resultDiv.innerHTML += `<p style="width:100%; margin-top:15px;">${recommendation[i].description}</p>`;
+    
+              //  }
+            }  
+        }
 
             document.getElementById("result").style.display = "block";
 
-
+    }
+    )
+    .catch(error => {
+        console.error('Error:', error);
+        resultDiv.innerHTML = 'An error occured';
     });
 }
 
+/*reset search results */
+function resetSearch() {
+    document.getElementById("result").style.display = "none";
+    document.getElementById('keywordInput').value = '';
+    resultDiv.innerHTML = '';
+
+
+}
  
