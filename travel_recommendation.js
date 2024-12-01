@@ -31,7 +31,7 @@ function clearContactFormInputs() {
     document.getElementById('subject').value = '';
 }
 
-/*search functionality with some tolerance */
+/*search dictionary functionality with some tolerance */
 
 const SEARCHABLES = ['beach', 'country', 'city', 'temple', 'australia', 'japan', 'brazil', 'cambodia', 'india', 'polynesia', 'sao paulo', 'copacabana'];
 const MIN_DISTANCE = 3;
@@ -67,3 +67,40 @@ function levenshtein (str1, str2) {
     }
     return track[str2.length][str1.length];
  };
+
+ /* fetch json and search */
+ function searchCondition () {
+
+   
+  
+    fetch('travel_recommendation_api.json')
+    .then(result => result.json())
+    .then(data => {
+        //let json = JSON.stringify(data);
+        //console.log(json);
+        const searchText = document.getElementById('keywordInput').value.toLowerCase();
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = '';
+
+            if(levenshtein('country', searchText) <= 3){
+                const recommendation = data.countries;
+                console.log(recommendation);
+                
+                for (let i = 0; i < recommendation.length; i++) {
+                   for (let j = 0; j < recommendation[i].cities.length; j++){
+                        resultDiv.innerHTML += `<img src="${recommendation[i].cities[j].imageUrl}" alt="not available" style="width:100%; margin-top:30px;">`;
+                        resultDiv.innerHTML +=  `<h2 style="width:100%; margin-top:20px;">${recommendation[i].cities[j].name}</h2>`;    
+                        resultDiv.innerHTML += `<p style="width:100%; margin-top:15px;">${recommendation[i].cities[j].description}</p>`;
+        
+                    }
+                }
+                
+            }
+
+            document.getElementById("result").style.display = "block";
+
+
+    });
+}
+
+ 

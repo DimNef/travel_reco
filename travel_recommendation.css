@@ -415,4 +415,35 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+/*search results popup */
+.popup {
+
+    display: none;
+   position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Arial, sans-serif;
+    right: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    height: 1000px;
+    overflow-y: auto;
+    background-color: rgba(52,48,50,0.6);
+   /* opacity: 0.6;*/
+    padding: 40px 20px;
+    margin:40px;
+    color: white;
+    align-items: center;
+    
+    
+    }
+    
+    .popup-content {
+    
+        text-align: center;
+    
+    }
+    
+
   
